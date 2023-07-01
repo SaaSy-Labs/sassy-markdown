@@ -1,0 +1,59 @@
+{
+  "name": "saasy-markdown",
+  "publishConfig": {
+    "registry": "https://github.com/SaaSy-Labs/sassy-markdown.git"
+  },
+  "version": "1.0.0",
+  "description": "saasy markdown preview",
+  "scripts": {
+    "rollup": "rollup -c rollup.config.mjs",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SaaSy-Labs/sassy-markdown.git"
+  },
+  "keywords": [
+    "saasy"
+  ],
+  "author": "Julien Tremblay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SaaSy-Labs/sassy-markdown/issues"
+  },
+  "homepage": "https://github.com/SaaSy-Labs/sassy-markdown#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.22.5",
+    "@babel/preset-react": "^7.22.5",
+    "@babel/preset-typescript": "^7.22.5",
+    "@rollup/plugin-commonjs": "^25.0.2",
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "@rollup/plugin-typescript": "^11.1.2",
+    "@storybook/addon-essentials": "^7.0.24",
+    "@storybook/addon-interactions": "^7.0.24",
+    "@storybook/addon-links": "^7.0.24",
+    "@storybook/blocks": "^7.0.24",
+    "@storybook/react": "^7.0.24",
+    "@storybook/react-webpack5": "^7.0.24",
+    "@storybook/testing-library": "^0.0.14-next.2",
+    "@types/react": "^18.2.14",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup": "^3.0.0-8",
+    "rollup-plugin-dts": "^5.3.0",
+    "storybook": "^7.0.24",
+    "tslib": "^2.6.0",
+    "typescript": "^5.1.6"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "react-markdown": "^8.0.7"
+  }
+}
