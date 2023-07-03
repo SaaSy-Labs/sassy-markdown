@@ -1,4 +1,5 @@
 import React from "react";
+import "./MarkdownViewer.css";
 type MarkdownViewerProps = {
     terms: string[];
     dynamicData: string;

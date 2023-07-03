@@ -1,7 +1,7 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import { replaceTermsWithValues } from "./utils/replaceTermsWithValues";
-import * as S from "./MarkdownViewer.styles";
+import "./MarkdownViewer.css";
 
 type MarkdownViewerProps = {
   // array of terms as markdown string
@@ -17,9 +17,9 @@ const MarkdownViewer = ({ terms, dynamicData }: MarkdownViewerProps) => {
   );
 
   return (
-    <S.Container>
+    <div className="container">
       <ReactMarkdown>{displayMarkdown?.join("\n")}</ReactMarkdown>
-    </S.Container>
+    </div>
   );
 };
 
