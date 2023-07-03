@@ -43,7 +43,7 @@ export default [
   {
     input: "dist/esm/index.d.ts",
     output: [{ file: "dist/index.d.ts", format: "esm" }],
-    external: [/\.css$/, "react-markdown"],
+    external: [/\.css$/],
     plugins: [dts()],
   },
 ];

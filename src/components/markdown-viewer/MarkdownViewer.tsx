@@ -9,16 +9,21 @@ type MarkdownViewerProps = {
   terms: string[];
   // dynamicData json as a string to replace the values inside the markdown
   dynamicData: string;
+  customStyle?: React.CSSProperties;
 };
 
-const MarkdownViewer = ({ terms, dynamicData }: MarkdownViewerProps) => {
+const MarkdownViewer = ({
+  terms,
+  dynamicData,
+  customStyle,
+}: MarkdownViewerProps) => {
   const displayMarkdown = replaceTermsWithValues(
     terms,
     JSON.parse(dynamicData)
   );
 
   return (
-    <div className="markdown-viewer container">
+    <div className="markdown-viewer container" style={customStyle}>
       <ReactMarkdown>{displayMarkdown?.join("\n")}</ReactMarkdown>
     </div>
   );
