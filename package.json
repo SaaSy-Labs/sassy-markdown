@@ -1,9 +1,10 @@
 {
-  "name": "saasy-markdown",
+  "name": "@SaaSy-Labs/saasy-markdown",
+  "version": "1.0.1",
+  "type": "module",
   "publishConfig": {
-    "registry": "https://github.com/SaaSy-Labs/sassy-markdown.git"
+    "registry": "https://npm.pkg.github.com/SaaSy-Labs"
   },
-  "version": "1.0.0",
   "description": "saasy markdown preview",
   "scripts": {
     "rollup": "rollup -c rollup.config.mjs",
@@ -38,6 +39,7 @@
     "@storybook/react-webpack5": "^7.0.24",
     "@storybook/testing-library": "^0.0.14-next.2",
     "@types/react": "^18.2.14",
+    "@types/styled-components": "^5.1.26",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -54,6 +56,7 @@
   ],
   "types": "dist/index.d.ts",
   "dependencies": {
-    "react-markdown": "^8.0.7"
+    "react-markdown": "^8.0.7",
+    "styled-components": "^6.0.1"
   }
 }
