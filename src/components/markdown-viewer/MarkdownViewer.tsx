@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactMarkdown from "react-markdown";
 import { replaceTermsWithValues } from "./utils/replaceTermsWithValues";
 import "./MarkdownViewer.css";
 import "normalize.css";
+import { createPortal } from "react-dom";
 
 type MarkdownViewerProps = {
   // array of terms as markdown string
@@ -17,6 +18,8 @@ const MarkdownViewer = ({
   dynamicData,
   customStyle,
 }: MarkdownViewerProps) => {
+  const [ref, setRef] = useState();
+  const container = ref?.contentWindow?.document?.body;
   const displayMarkdown = replaceTermsWithValues(
     terms,
     JSON.parse(dynamicData)
@@ -24,7 +27,13 @@ const MarkdownViewer = ({
 
   return (
     <div className="markdown-viewer container" style={customStyle}>
-      <ReactMarkdown>{displayMarkdown?.join("\n")}</ReactMarkdown>
+      <iframe ref={setRef} frameBorder="0" width={"100%"} height={"600px"}>
+        {container &&
+          createPortal(
+            <ReactMarkdown>{displayMarkdown?.join("\n")}</ReactMarkdown>,
+            container
+          )}
+      </iframe>
     </div>
   );
 };
