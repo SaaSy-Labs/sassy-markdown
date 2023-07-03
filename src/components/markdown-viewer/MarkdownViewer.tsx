@@ -3,12 +3,12 @@ import ReactMarkdown from "react-markdown";
 import { replaceTermsWithValues } from "./utils/replaceTermsWithValues";
 import * as S from "./MarkdownViewer.styles";
 
-interface MarkdownViewerProps {
+type MarkdownViewerProps = {
   // array of terms as markdown string
   terms: string[];
   // dynamicData json as a string to replace the values inside the markdown
   dynamicData: string;
-}
+};
 
 const MarkdownViewer = ({ terms, dynamicData }: MarkdownViewerProps) => {
   const displayMarkdown = replaceTermsWithValues(

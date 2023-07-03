@@ -1,9 +1,7 @@
-import React from 'react';
-
+import React from "react";
 type MarkdownViewerProps = {
     terms: string[];
     dynamicData: string;
 };
 declare const MarkdownViewer: ({ terms, dynamicData }: MarkdownViewerProps) => React.JSX.Element;
-
-export { MarkdownViewer };
+export default MarkdownViewer;
