@@ -15,7 +15,7 @@ const MarkdownViewer = ({ terms, dynamicData }: MarkdownViewerProps) => {
     terms,
     JSON.parse(dynamicData)
   );
-  console.log({ displayMarkdown });
+
   return (
     <S.Container>
       <ReactMarkdown>{displayMarkdown?.join("\n")}</ReactMarkdown>
