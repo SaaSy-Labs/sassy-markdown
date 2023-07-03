@@ -26,11 +26,13 @@ const MarkdownViewer = ({
   );
 
   return (
-    <div className="markdown-viewer container" style={customStyle}>
+    <div className="markdown-viewer container">
       <iframe ref={setRef} frameBorder="0" width={"100%"} height={"600px"}>
         {container &&
           createPortal(
-            <ReactMarkdown>{displayMarkdown?.join("\n")}</ReactMarkdown>,
+            <ReactMarkdown className="text-white">
+              {displayMarkdown?.join("\n")}
+            </ReactMarkdown>,
             container
           )}
       </iframe>
