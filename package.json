@@ -1,7 +1,6 @@
 {
   "name": "@SaaSy-Labs/saasy-markdown",
-  "version": "1.0.2",
-  "type": "module",
+  "version": "1.0.3",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/SaaSy-Labs"
   },
