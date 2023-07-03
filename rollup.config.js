@@ -17,7 +17,7 @@ export default [
         file: packageJson.main,
         format: "cjs",
         sourcemap: true,
-        name: "thedevdesigner-react-lib",
+        name: "@SaaSy-Labs/saasy-markdown",
       },
       {
         file: packageJson.module,
