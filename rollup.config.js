@@ -35,7 +35,7 @@ export default [
         inject: true,
         minimize: true,
         sourceMap: true,
-        extract: "styles.css",
+        // extract: "styles.css",
       }),
       terser({ compress: true }),
     ],
@@ -43,7 +43,7 @@ export default [
   {
     input: "dist/esm/index.d.ts",
     output: [{ file: "dist/index.d.ts", format: "esm" }],
-    external: [/\.css$/],
+    external: [/\.css$/, "react-markdown"],
     plugins: [dts()],
   },
 ];
