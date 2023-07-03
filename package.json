@@ -1,6 +1,6 @@
 {
   "name": "@SaaSy-Labs/saasy-markdown",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/SaaSy-Labs"
   },
@@ -59,8 +59,7 @@
   },
   "peerDependencies": {
     "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "react-markdown": "^8.0.7"
+    "react-dom": "^18.1.0"
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
