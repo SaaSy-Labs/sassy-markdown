@@ -5,28 +5,47 @@ import "./MarkdownViewer.css";
 import "normalize.css";
 import { createPortal } from "react-dom";
 
+interface InjectedRule {
+  key: string;
+  displayName: string;
+  description?: string;
+  positionIndex: number;
+  regExp?: string;
+  minLength?: number;
+  maxLength?: number;
+  isRequired?: ["proposal" | "counter-sign"];
+  type: "text" | "number";
+}
+
+export interface Term {
+  name: string;
+  markdown: string;
+  injectedRules?: InjectedRule[];
+}
+
 type MarkdownViewerProps = {
   // array of terms as markdown string
-  terms: string[];
+  terms: Term[];
   // dynamicData json as a string to replace the values inside the markdown
   dynamicData: string;
-  customStyle?: React.CSSProperties;
+  containerCustomStyle?: React.CSSProperties;
 };
 
 const MarkdownViewer = ({
   terms,
   dynamicData,
-  customStyle,
+  containerCustomStyle,
 }: MarkdownViewerProps) => {
-  const [ref, setRef] = useState();
+  const [ref, setRef] = useState<HTMLIFrameElement | null>();
+  //@ts-ignore
   const container = ref?.contentWindow?.document?.body;
   const displayMarkdown = replaceTermsWithValues(
-    terms,
+    terms.map((c) => c.markdown),
     JSON.parse(dynamicData)
   );
 
   return (
-    <div className="markdown-viewer container">
+    <div className="markdown-viewer container" style={containerCustomStyle}>
       <iframe ref={setRef} frameBorder="0" width={"100%"} height={"600px"}>
         {container &&
           createPortal(
