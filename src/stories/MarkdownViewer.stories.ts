@@ -21,7 +21,7 @@ export const Primary: Story = {
       {
         name: "LICENSE AGREEMENT",
         markdown:
-          '**TRADEMARK LICENSE**\n\n > This license Agreement ( "Agreement"), is entered into as of the date signed below (the "Effective Date") by and between **${COMPANY_NAME}**, with the business address at **${COMPANY_ADDRESS}** (the "Company" or "Licensee"), and **${OFFERER}** with an address at **${OFFERER_ADDRESS}** who holds Pudgy Penguin NFT number **${TOKEN_ID}** (the "Penguin Holder" or "Licensor"). \n\n',
+          '**LICENSE AGREEMENT**\n\n > This license Agreement ( "Agreement"), is entered into as of the date signed below (the "Effective Date") by and between **${COMPANY_NAME}**, with the business address at **${COMPANY_ADDRESS}** (the "Company" or "Licensee"), and **${OFFERER}** with an address at **${OFFERER_ADDRESS}** who holds Pudgy Penguin NFT number **${TOKEN_ID}** (the "Penguin Holder" or "Licensor"). \n\n',
         injectedRules: [
           {
             key: "COMPANY_NAME",
