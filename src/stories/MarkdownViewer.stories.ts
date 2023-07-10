@@ -362,7 +362,7 @@ export const Primary: Story = {
       {
         name: "Signature page",
         markdown:
-          "> IN WITNESS WHEREOF, the parties have executed this Licensing Agreement as of the date here indicated.\n\n >  For the Company, **${COMPANY_NAME}**. \n\n > By: **${COMPANY_BY}** \n\n > Date: **${COMPANY_SIGNATURE_DATE}**\n\n > Penguin Holder, Pudgy Penguin NFT # **${TOKEN_ID}**. \n\n > By: **${OFFERER_BY}** \n\n > Date: **${OFFERER_SIGNATURE_DATE}**  \n ",
+          "> IN WITNESS WHEREOF, the parties have executed this Licensing Agreement as of the date here indicated.\n\n >  For the Company, **${COMPANY_NAME}**. \n\n > By: **${COMPANY_BY}** \n\n > Date: **${COMPANY_SIGNATURE_DATE}** \n\n > Signature: **${ONCHAIN_PROMISOR_SIGNATURE}**\n\n > Penguin Holder, Pudgy Penguin NFT # **${TOKEN_ID}**. \n\n > By: **${OFFERER_BY}** \n\n > Date: **${OFFERER_SIGNATURE_DATE}** \n\n > Signature: **${ONCHAIN_OFFERER_SIGNATURE}**  \n ",
         injectedRules: [
           {
             key: "COMPANY_NAME",
@@ -389,10 +389,18 @@ export const Primary: Story = {
             type: "text",
           },
           {
+            key: "ONCHAIN_PROMISOR_SIGNATURE",
+            displayName: "Onchain Promisor Signature",
+            regExp: "^[\u0020-\u007E\u00A0-\u00FF]+$",
+            positionIndex: 3,
+            isRequired: ["counter-sign"],
+            type: "text",
+          },
+          {
             key: "TOKEN_ID",
             displayName: "Token Id",
             regExp: "^[0-9]+$",
-            positionIndex: 3,
+            positionIndex: 4,
             isRequired: ["proposal"],
             type: "number",
           },
@@ -400,7 +408,7 @@ export const Primary: Story = {
             key: "OFFERER_BY",
             displayName: "Offerer By",
             regExp: "^[\u0020-\u007E\u00A0-\u00FF]+$",
-            positionIndex: 4,
+            positionIndex: 5,
             isRequired: ["proposal"],
             type: "text",
           },
@@ -408,15 +416,23 @@ export const Primary: Story = {
             key: "OFFERER_SIGNATURE_DATE",
             displayName: "Offerer Signature Date",
             regExp: "^[\u0020-\u007E\u00A0-\u00FF]+$",
-            positionIndex: 5,
+            positionIndex: 6,
             isRequired: ["proposal"],
+            type: "text",
+          },
+          {
+            key: "ONCHAIN_OFFERER_SIGNATURE",
+            displayName: "Onchain Offerer Signature",
+            regExp: "^[\u0020-\u007E\u00A0-\u00FF]+$",
+            positionIndex: 7,
+            isRequired: ["counter-sign"],
             type: "text",
           },
         ],
       },
     ],
     dynamicData:
-      '{"OFFERER_NAME":"John Doe","OFFERER_ADDRESS":"98794 Maple Street, Anywhere, Anytown, 19958, United States","COMPANY_NAME":"LSLTTT HOLDINGS INC","COMPANY_ADDRESS":"6192 Coastal Hwy, Lewes, Delaware, 19958, United States","PROJECT_NAME":"Penguin Ice Cream","SHARE_PERCENTAGE":"2","FEE":"0.1","PAYMENT_SCHEDULE":"monthly","PAYMENT_DATE":"2023-08-6","ONCHAIN_OFFERER_SIGNATURE":"0x3216e290e972a7b3db0639b19fc7c8a894ee31bfaee273071d4f960e87be702e030cfe4cb478bea9b458035b7f45b6da784bd51cba66529f5f211fc193b8937f1c","TOKEN_ID":"865"}',
+      '{"OFFERER_NAME":"John Doe","OFFERER_ADDRESS":"98794 Maple Street, Anywhere, Anytown, 19958, United States","COMPANY_NAME":"LSLTTT HOLDINGS INC","COMPANY_ADDRESS":"6192 Coastal Hwy, Lewes, Delaware, 19958, United States","PROJECT_NAME":"Penguin Ice Cream","SHARE_PERCENTAGE":"2","FEE":"0.1","PAYMENT_SCHEDULE":"monthly","PAYMENT_DATE":"2023-08-6","TOKEN_ID":"865"}',
   },
 };
 

@@ -29,19 +29,27 @@ type MarkdownViewerProps = {
   // dynamicData json as a string to replace the values inside the markdown
   dynamicData: string;
   containerCustomStyle?: React.CSSProperties;
+  ONCHAIN_PROMISOR_SIGNATURE?: string;
+  ONCHAIN_OFFERER_SIGNATURE?: string;
 };
 
 const MarkdownViewer = ({
   terms,
   dynamicData,
   containerCustomStyle,
+  ONCHAIN_PROMISOR_SIGNATURE,
+  ONCHAIN_OFFERER_SIGNATURE,
 }: MarkdownViewerProps) => {
   const [ref, setRef] = useState<HTMLIFrameElement | null>();
   //@ts-ignore
   const container = ref?.contentWindow?.document?.body;
   const displayMarkdown = replaceTermsWithValues(
     terms.map((c) => c.markdown),
-    JSON.parse(dynamicData)
+    {
+      ...JSON.parse(dynamicData),
+      ONCHAIN_PROMISOR_SIGNATURE: ONCHAIN_PROMISOR_SIGNATURE || "",
+      ONCHAIN_OFFERER_SIGNATURE: ONCHAIN_OFFERER_SIGNATURE || "",
+    }
   );
 
   return (
