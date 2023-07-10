@@ -21,6 +21,8 @@ type MarkdownViewerProps = {
     terms: Term[];
     dynamicData: string;
     containerCustomStyle?: React.CSSProperties;
+    ONCHAIN_PROMISOR_SIGNATURE?: string;
+    ONCHAIN_OFFERER_SIGNATURE?: string;
 };
-declare const MarkdownViewer: ({ terms, dynamicData, containerCustomStyle, }: MarkdownViewerProps) => React.JSX.Element;
+declare const MarkdownViewer: ({ terms, dynamicData, containerCustomStyle, ONCHAIN_PROMISOR_SIGNATURE, ONCHAIN_OFFERER_SIGNATURE, }: MarkdownViewerProps) => React.JSX.Element;
 export default MarkdownViewer;
