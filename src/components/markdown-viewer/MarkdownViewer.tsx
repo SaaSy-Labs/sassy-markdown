@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import { replaceTermsWithValues } from "./utils/replaceTermsWithValues";
 import "./MarkdownViewer.css";
@@ -31,6 +31,7 @@ type MarkdownViewerProps = {
   containerCustomStyle?: React.CSSProperties;
   ONCHAIN_PROMISOR_SIGNATURE?: string;
   ONCHAIN_OFFERER_SIGNATURE?: string;
+  onReachedBottom?: () => void;
 };
 
 const MarkdownViewer = ({
@@ -39,8 +40,10 @@ const MarkdownViewer = ({
   containerCustomStyle,
   ONCHAIN_PROMISOR_SIGNATURE,
   ONCHAIN_OFFERER_SIGNATURE,
+  onReachedBottom,
 }: MarkdownViewerProps) => {
   const [ref, setRef] = useState<HTMLIFrameElement | null>();
+  const [scrollListenerAdded, setScrollListenerAdded] = useState(false);
   //@ts-ignore
   const container = ref?.contentWindow?.document?.body;
   const displayMarkdown = replaceTermsWithValues(
@@ -52,9 +55,44 @@ const MarkdownViewer = ({
     }
   );
 
+  useEffect(() => {
+    const iframeWindow = ref?.contentWindow;
+    if (iframeWindow && !scrollListenerAdded) {
+      iframeWindow.addEventListener("scroll", handleIframeScroll);
+      setScrollListenerAdded(true);
+    }
+
+    return () => {
+      if (iframeWindow && scrollListenerAdded) {
+        iframeWindow.removeEventListener("scroll", handleIframeScroll);
+        setScrollListenerAdded(false);
+      }
+    };
+  }, [ref, scrollListenerAdded]);
+
+  const handleIframeScroll = () => {
+    const { scrollHeight, scrollTop, clientHeight } =
+      ref!.contentDocument!.documentElement;
+    if (scrollHeight - scrollTop === clientHeight) {
+      if (onReachedBottom) {
+        onReachedBottom();
+      }
+    }
+  };
+
   return (
-    <div className="markdown-viewer container" style={containerCustomStyle}>
-      <iframe ref={setRef} frameBorder="0" width={"100%"} height={"600px"}>
+    <div
+      className="markdown-viewer container"
+      onScroll={() => console.log("scrolld")}
+      style={containerCustomStyle}
+    >
+      <iframe
+        ref={setRef}
+        onScroll={() => console.log("scrollI")}
+        frameBorder="0"
+        width={"100%"}
+        height={"600px"}
+      >
         {container &&
           createPortal(
             <ReactMarkdown className="text-white">
