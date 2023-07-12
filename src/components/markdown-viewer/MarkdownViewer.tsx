@@ -72,7 +72,8 @@ const MarkdownViewer = ({
 
   const handleIframeScroll = () => {
     const { scrollHeight, scrollTop, clientHeight } =
-      ref!.contentDocument!.documentElement;
+      ref!.contentDocument!.body;
+
     if (scrollHeight - scrollTop === clientHeight) {
       if (onReachedBottom) {
         onReachedBottom();
