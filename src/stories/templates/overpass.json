@@ -1,0 +1,389 @@
+[
+   {
+     "name": "LICENSE AGREEMENT",
+     "markdown": "**LICENSE AGREEMENT**\n\n > This license Agreement ( \"Agreement\"), is entered into as of the date signed below (the \"Effective Date\") by and between **${COMPANY_NAME}**, with the business address at **${COMPANY_ADDRESS}** (the \"Company\" or \"Licensee\"), and **${OFFERER}** with an address at **${OFFERER_ADDRESS}** who holds Pudgy Penguin NFT number **${TOKEN_ID}** (the \"Penguin Holder\" or \"Licensor\"). \n\n",
+     "injectedRules": [
+       {
+         "key": "COMPANY_NAME",
+         "displayName": "Company Name",
+         "regExp": "^[\u0020-\u007E\u00A0-\u00FF]+$",
+         "positionIndex": 0,
+         "isRequired": ["proposal"],
+         "type": "text"
+       },
+       {
+         "key": "COMPANY_ADDRESS",
+         "displayName": "Company address",
+         "regExp": "^[\u0020-\u007E\u00A0-\u00FF]+$",
+         "positionIndex": 1,
+         "isRequired": ["proposal"],
+         "type": "text"
+       },
+       {
+         "key": "OFFERER_NAME",
+         "displayName": "Offerer Name",
+         "regExp": "^[\u0020-\u007E\u00A0-\u00FF]+$",
+         "positionIndex": 2,
+         "isRequired": ["proposal"],
+         "type": "text"
+       },
+       {
+         "key": "OFFERER_ADDRESS",
+         "displayName": "Offerer Address",
+         "regExp": "^[\u0020-\u007E\u00A0-\u00FF]+$",
+         "positionIndex": 3,
+         "isRequired": ["proposal"],
+         "type": "text"
+       },
+       {
+         "key": "TOKEN_ID",
+         "displayName": "Token Id",
+         "regExp": "^[0-9]+$",
+         "positionIndex": 4,
+         "isRequired": ["proposal"],
+         "type": "number"
+       }
+     ]
+   },
+   {
+     "name": "Recitals",
+     "markdown": "> **1. RECITALS.** \n \n > > The Company has selected Pudgy Penguin NFT number **${TOKEN_ID}** for use in a product development, promotion and/or sales Project relating to or concerning **${PROJECT_NAME}** (the Project). Penguin Holder has personal rights and certain commercial rights to their Pudgy Penguin NFT, which the Company desires to license. Specifically, the Company has requested, and Penguin Holder has agreed to make Pudgy Penguin NFT number **${TOKEN_ID}** available for use in the Project. \n \n",
+     "injectedRules": [
+       {
+         "key": "TOKEN_ID",
+         "displayName": "Token Id",
+         "regExp": "^[0-9]+$",
+         "positionIndex": 0,
+         "isRequired": ["proposal"],
+         "type": "number"
+       },
+       {
+         "key": "PROJECT_NAME",
+         "displayName": "Project Name",
+         "regExp": "^[\u0020-\u007E\u00A0-\u00FF]+$",
+         "positionIndex": 1,
+         "isRequired": ["proposal"],
+         "type": "text"
+       }
+     ]
+   },
+   {
+     "name": "Agreements",
+     "markdown": "> **2. AGREEMENT.** \n \n > > IN CONSIDERATION of the mutual promises and covenants set forth herein, and for other good and valuable consideration, the sufficiency of which is hereby acknowledged, the parties agree to the following: \n \n >"
+   },
+   {
+     "name": "Agreement A",
+     "markdown": "> **A.**  Penguin Holder grants the Company a limited, non-exclusive, worldwide license to use Pudgy Penguin NFT number **${TOKEN_ID}** solely as otherwise may be needed to fully effectuate the Project’s purpose; \n \n >",
+     "injectedRules": [
+       {
+         "key": "TOKEN_ID",
+         "displayName": "Token Id",
+         "regExp": "^[0-9]+$",
+         "positionIndex": 0,
+         "isRequired": ["proposal"],
+         "type": "number"
+       }
+     ]
+   },
+   {
+     "name": "Agreement B",
+     "markdown": "> **B.**  The Company shall oversee and direct the Project and shall have complete discretion and control over the Project, including but not limited to whether and how to proceed with the Project at each stage and whether or not to bring the Project to completion; \n \n >",
+     "injectedRules": [
+       {
+         "key": "FEE",
+         "displayName": "FEE",
+         "regExp": "^[0-9.]+$",
+         "positionIndex": 0,
+         "isRequired": ["proposal"],
+         "type": "number"
+       }
+     ]
+   },
+   {
+     "name": "Agreement C",
+     "markdown": "> **C.** Penguin holder will receive an **${FEE_PAYMENT_METHOD}** licensing fee of **${FEE}** ETH; \n \n >",
+     "injectedRules": [
+       {
+         "key": "FEE",
+         "displayName": "Fee",
+         "regExp": "^[0-9.]+$",
+         "positionIndex": 0,
+         "isRequired": ["proposal"],
+         "type": "number"
+       },
+       {
+         "key": "FEE_PAYMENT_METHOD",
+         "displayName": "Fee Payment Method",
+         "regExp": "^(one time|fully paid up|upfront)$",
+         "positionIndex": 1,
+         "isRequired": ["proposal"],
+         "type": "text"
+       }
+     ]
+   },
+   {
+     "name": "Agreement D",
+     "markdown": "> **D.** Moreover, in the event that the Project results in products related to Pudgy Penguin NFT number **${TOKEN_ID}** being marketed, distributed, and sold, then the Penguin Holder shall receive Royalties (as defined below) from the Project. \n \n",
+     "injectedRules": [
+       {
+         "key": "TOKEN_ID",
+         "displayName": "Token Id",
+         "regExp": "^[0-9]+$",
+         "positionIndex": 0,
+         "isRequired": ["proposal"],
+         "type": "number"
+       }
+     ]
+   },
+   {
+     "name": "DISCRETION",
+     "markdown": "> **3. DISCRETION AND CONTROL OF PROJECT.** \n \n > > It is understood and agreed that the Company shall oversee and direct the Project and shall have complete discretion and control over the Project, including but not limited to the development, production, approval and quality control phases of the Project, as well as the marketing, distribution, and sales phases of the Project. The Company reserves the right to modify or terminate the Project entirely, as well as the right to decide not to utilize Pudgy Penguin NFT number **${TOKEN_ID}** in the Project. \n \n ",
+     "injectedRules": [
+       {
+         "key": "TOKEN_ID",
+         "displayName": "Token Id",
+         "regExp": "^[0-9]+$",
+         "positionIndex": 0,
+         "isRequired": ["proposal"],
+         "type": "number"
+       }
+     ]
+   },
+   {
+     "name": "RELATIONSHIP",
+     "markdown": "> **4. RELATIONSHIP OF THE PARTIES.** \n \n > > The parties remain entirely independent and unrelated. Nothing in this Agreement shall be deemed to create the relationship of employer and employee, partnership, joint venture, principal and agent, franchisor and franchisee, representative, or any other business relationship between the Company and the Penguin Holder. The Company’s sole obligation to the Penguin Holder is to fulfill its contractual obligations as set forth herein. \n \n >"
+   },
+   {
+     "name": "PAYMENT",
+     "markdown": "**5. PAYMENT AND/OR ROYALTIES.** \n \n >"
+   },
+   {
+     "name": "PAYMENT 5.1",
+     "markdown": " > **5.1** Penguin holder will receive an **${FEE_PAYMENT_METHOD}** licensing fee of **${FEE}** in consideration for the license given herein; \n \n >",
+     "injectedRules": [
+       {
+         "key": "FEE",
+         "displayName": "Fee",
+         "regExp": "^[0-9.]+$",
+         "positionIndex": 0,
+         "isRequired": ["proposal"],
+         "type": "number"
+       },
+       {
+         "key": "FEE_PAYMENT_METHOD",
+         "displayName": "Fee Payment Method",
+         "regExp": "^(one time|fully paid up|upfront)$",
+         "positionIndex": 1,
+         "isRequired": ["proposal"],
+         "type": "text"
+       }
+     ]
+   },
+   {
+     "name": "PAYMENT 5.2",
+     "markdown": " > **5.2** Calculating Royalty Rates. Moreover, in the event that the Project results in products related to Pudgy Penguin NFT number **${TOKEN_ID}** being brought to market, then the Company shall pay to the Penguin Holder a Royalty, as per the applicable Royalty Rate calculation set forth below. The Royalty shall mean the Royalty Rate percentage as applied to **${GROSS_NET}** Sales (for the Project’s Term). \n \n > > > Royalty Rate for Penguin Holders of Pudgy Penguin NFTs: For each eligible Penguin Holder of a Pudgy Penguin NFT, the Royalty Rate will mean a prorated share of **${SHARE_PERCENTAGE}**% of **${GROSS_NET}** (for the Project’s Term). \n \n >",
+     "injectedRules": [
+       {
+         "key": "TOKEN_ID",
+         "displayName": "Token Id",
+         "regExp": "^[0-9]+$",
+         "positionIndex": 0,
+         "isRequired": ["proposal"],
+         "type": "number"
+       },
+       {
+         "key": "SHARE_PERCENTAGE",
+         "displayName": "Share Percentage",
+         "regExp": "^[0-9]+$",
+         "positionIndex": 1,
+         "isRequired": ["proposal"],
+         "type": "number"
+       },
+       {
+         "key": "GROSS_NET",
+         "displayName": "Gross Net",
+         "regExp": "^(Gross|Net)$",
+         "positionIndex": 2,
+         "isRequired": ["proposal"],
+         "type": "text"
+       }
+     ]
+   },
+   {
+     "name": "PAYMENT 5.3",
+     "markdown": " > **5.3** Taxes. In the event that the Penguin Holder receives a license fee, Royalty or any other payment or taxable benefit as a result of the Project or this Agreement, the Penguin Holder will be solely responsible for accounting for and paying any and all taxes levied by applicable laws. \n \n >"
+   },
+   {
+     "name": "Agreements",
+     "markdown": "> **6. REPORTING.** \n \n > > For the Agreement’s Term, the Company shall make its Royalty payments, if any, due to the wallet associated with the Pudgy Penguin NFT, subject to the following payment schedule: **${MONTHLY_QUATERLY_YEARLY}**, for the Agreement’s Term. Upon request of the then-current owner of the Pudgy Penguin NFT, Company shall provide a statement of accounting to accompany its Royalty payments. The Company may, in its discretion, make adjustments to future Royalty payment(s), if the Company determines that its initial payments were materially incorrect. \n \n >",
+     "injectedRules": [
+       {
+         "key": "MONTHLY_QUATERLY_YEARLY",
+         "displayName": "Payment Schedule",
+         "regExp": "^(monthly|quarterly|yearly)$",
+         "positionIndex": 0,
+         "isRequired": ["proposal"],
+         "type": "text"
+       }
+     ]
+   },
+   {
+     "name": "RIGHT TO PAYMENT",
+     "markdown": "**7. RIGHT TO PAYMENT ATTACHES TO NFT ITSELF.** \n \n >"
+   },
+   {
+     "name": "RIGHT TO PAYMENT 7.1",
+     "markdown": " > **7.1** The Penguin Holder is free to sell or trade their Pudgy Penguin NFT at their discretion, at any time. However, any subsequent purchaser must agree to take the Pudgy Penguin NFT subject to the terms and conditions of this Agreement, and the Penguin Holder expressly agrees that they will disclose this Agreement, and make no representations, nor enter any side-arrangements or agreements, contrary to the terms of the Agreement in connection with any such sale or trade. \n \n >"
+   },
+   {
+     "name": "RIGHT TO PAYMENT 7.2",
+     "markdown": " > **7.2** The Penguin Holder understands and agrees that the license given in the Agreement attaches to the Pudgy Penguin NFT itself. Therefore, the benefits of the Agreement, including but not limited to any Royalties to be paid by the Company pursuant to the Agreement, will attach to ownership of the Pudgy Penguin NFT itself, and not to the Penguin Holder individually. The Company may attach a token to the Pudgy Penguin NFT embodying the rights to any Royalties that may become due and enabling the Company to pay Royalties directly to the then-current owner of the Pudgy Penguin NFT’s wallet, in USDC. \n \n >"
+   },
+   {
+     "name": "COMPANYS OWNERSHIP AND IP RIGHTS",
+     "markdown": "**8. COMPANY’S OWNERSHIP AND IP RIGHTS.** \n \n >"
+   },
+   {
+     "name": "RIGHT TO PAYMENT 7.1",
+     "markdown": " > **8.1 Ownership and Intellectual Property Rights.** Any and all Project specifications, designs, prototypes, samples, models, and related items, as well as any and all related products (the Project Deliverables), will be the sole and exclusive property of the Company and Penguin Holder will have no rights to ownership or intellectual property rights in the Project or the Project Deliverables. \n \n >"
+   },
+   {
+     "name": "TERM TERMINATION",
+     "markdown": "**9. TERM; TERMINATION.** \n \n >"
+   },
+   {
+     "name": "TERM TERMINATION 9.1",
+     "markdown": " > **9.1 Term.** This Agreement will commence on the Effective Date and will remain in force and effect until **${PAYMENT_DATE}**, unless and until the Parties agree to an extension in writing (the \"Term\"). \n \n >",
+     "injectedRules": [
+       {
+         "key": "PAYMENT_DATE",
+         "displayName": "Payment Date",
+         "regExp": "^[\u0020-\u007E\u00A0-\u00FF]+$",
+         "positionIndex": 0,
+         "isRequired": ["proposal"],
+         "type": "text"
+       }
+     ]
+   },
+   {
+     "name": "COVENANTS, REPRESENTATIONS AND WARRANTIES",
+     "markdown": "**10. COVENANTS, REPRESENTATIONS AND WARRANTIES.** \n \n >"
+   },
+   {
+     "name": "COVENANTS, REPRESENTATIONS AND WARRANTIES 10.1",
+     "markdown": " > **10.1 Mutual Representations and Warranties.** Each party represents and warrants that (i) it has full right, power and authority to enter into and fully perform its obligations under this Agreement, (ii) the execution, delivery and performance of the terms and conditions of this Agreement do not conflict with any other agreement to which it is a party or by which it is bound, (iii) it will not make any other agreement that contradicts its representations or impairs its obligations under this Agreement subsequent to entering this Agreement, and (iv) it will at all times comply with all applicable laws, rules and regulations applicable to its activities, duties and obligations hereunder. \n \n >",
+     "injectedRules": [
+       {
+         "key": "PAYMENT_DATE",
+         "displayName": "Payment Date",
+         "regExp": "^[\u0020-\u007E\u00A0-\u00FF]+$",
+         "positionIndex": 0,
+         "isRequired": ["proposal"],
+         "type": "text"
+       }
+     ]
+   },
+   {
+     "name": "GENERAL TERMS",
+     "markdown": "**11. GENERAL TERMS.** \n \n >"
+   },
+   {
+     "name": "GENERAL TERMS 11.1",
+     "markdown": " > **11.1 Governing Law.** This Agreement will be governed by and construed in accordance with the laws of the State of California without regard to conflict of laws principles. \n \n >"
+   },
+   {
+     "name": "GENERAL TERMS 11.2",
+     "markdown": " > **11.2 Binding Arbitration.** If a dispute arises from or relates to this Agreement or the breach thereof, and if the dispute cannot be settled through direct discussions, the parties agree to endeavor first to settle the dispute by mediation administered by a mutually acceptable mediator provided through the American Arbitration Association before resorting to arbitration. The parties further agree that any unresolved controversy or claim arising out of or relating to this contract, or breach thereof, shall be settled by arbitration administered by the American Arbitration Association in keeping with its Commercial Arbitration Rules, and judgment on the award rendered by the arbitrator may be entered in any court having jurisdiction thereof. Claims shall be heard by a single arbitrator. The place of arbitration shall be San Francisco, California. Except as may be required by law, or as is necessary to effectuate entering the arbitration award, neither party nor the arbitrator may disclose the existence, content, or results of any dispute or arbitration hereunder without the written consent of both parties. \n \n >"
+   },
+   {
+     "name": "GENERAL TERMS 11.3",
+     "markdown": " > **11.3 Severability; Amendment; Waiver.** If any provision of this Agreement is held by a court of competent jurisdiction or arbitrator to be contrary to law, such provision will be changed and interpreted so as to best accomplish the objectives of the original provision to the fullest extent allowed by law and the remaining provisions of this Agreement will remain in full force and effect. No changes, modifications or amendments are to be made to this Agreement unless evidenced in writing and signed for and on behalf of both parties. Failure by a party to enforce any term of this Agreement will not be deemed a waiver of future enforcement of that or any other term in this Agreement or any other agreement that may be in place between the parties. \n \n >"
+   },
+   {
+     "name": "GENERAL TERMS 11.4",
+     "markdown": " > **11.4 Assignment.** Neither party shall have any right or ability to assign, transfer or sublicense any obligations or benefit under this Agreement without the written consent of the other except that a party: (i) may assign and transfer this Agreement and its rights and obligations hereunder to any third party who succeeds to substantially all of its business or assets; or (ii) may assign or transfer any rights to receive payments hereunder to follow the NFT. This Agreement will bind and benefit the Parties and their respective successors and permitted assigns. \n \n >"
+   },
+   {
+     "name": "GENERAL TERMS 11.5",
+     "markdown": " > **11.5 Force Majeure.** Neither party will be liable for any failure or delay in its performance under this Agreement due to extraordinary events or causes, including, but not limited to, an act of God, act of civil or military authority, fire, epidemic, flood, earthquake, strikes, riot, war, sabotage, failure of suppliers and governmental action, which are beyond its reasonable control. \n \n >"
+   },
+   {
+     "name": "GENERAL TERMS 11.6",
+     "markdown": " > **11.6 Interpretation.** The section titles and numbering of this Agreement are displayed for convenience and have no legal effect. \n \n >"
+   },
+   {
+     "name": "GENERAL TERMS 11.7",
+     "markdown": " > **11.7 Entire Agreement.** This Agreement is the complete and exclusive agreement between the parties with respect to the subject matter hereof, superseding any prior or contemporaneous agreements and communications (both written and oral) regarding such subject matter. This Agreement may be executed in counterparts, each of which shall be deemed an original and all such counterparts shall constitute one and the same agreement. \n \n"
+   },
+   {
+     "name": "Signature page",
+     "markdown": "> IN WITNESS WHEREOF, the parties have executed this Licensing Agreement as of the date here indicated.\n\n >  For the Company, **${COMPANY_NAME}**. \n\n > By: **${COMPANY_BY}** \n\n > Date: **${COMPANY_SIGNATURE_DATE}** \n\n > Signature: **${ONCHAIN_PROMISOR_SIGNATURE}**\n\n > Penguin Holder, Pudgy Penguin NFT # **${TOKEN_ID}**. \n\n > By: **${OFFERER_BY}** \n\n > Date: **${OFFERER_SIGNATURE_DATE}** \n\n > Signature: **${ONCHAIN_OFFERER_SIGNATURE}**  \n ",
+     "injectedRules": [
+       {
+         "key": "COMPANY_NAME",
+         "displayName": "Company Name",
+         "regExp": "^[\u0020-\u007E\u00A0-\u00FF]+$",
+         "positionIndex": 0,
+         "isRequired": ["counter-sign"],
+         "type": "text"
+       },
+       {
+         "key": "COMPANY_BY",
+         "displayName": "Company By",
+         "regExp": "^[\u0020-\u007E\u00A0-\u00FF]+$",
+         "positionIndex": 1,
+         "isRequired": ["counter-sign"],
+         "type": "text"
+       },
+       {
+         "key": "COMPANY_SIGNATURE_DATE",
+         "displayName": "Company Signature Date",
+         "regExp": "^[\u0020-\u007E\u00A0-\u00FF]+$",
+         "positionIndex": 2,
+         "isRequired": ["counter-sign"],
+         "type": "text"
+       },
+       {
+         "key": "ONCHAIN_PROMISOR_SIGNATURE",
+         "displayName": "Onchain Promisor Signature",
+         "regExp": "^[\u0020-\u007E\u00A0-\u00FF]+$",
+         "positionIndex": 3,
+         "isRequired": ["counter-sign"],
+         "type": "text"
+       },
+       {
+         "key": "TOKEN_ID",
+         "displayName": "Token Id",
+         "regExp": "^[0-9]+$",
+         "positionIndex": 4,
+         "isRequired": ["proposal"],
+         "type": "number"
+       },
+       {
+         "key": "OFFERER_BY",
+         "displayName": "Offerer By",
+         "regExp": "^[\u0020-\u007E\u00A0-\u00FF]+$",
+         "positionIndex": 5,
+         "isRequired": ["proposal"],
+         "type": "text"
+       },
+       {
+         "key": "OFFERER_SIGNATURE_DATE",
+         "displayName": "Offerer Signature Date",
+         "regExp": "^[\u0020-\u007E\u00A0-\u00FF]+$",
+         "positionIndex": 6,
+         "isRequired": ["proposal"],
+         "type": "text"
+       },
+       {
+         "key": "ONCHAIN_OFFERER_SIGNATURE",
+         "displayName": "Onchain Offerer Signature",
+         "regExp": "^[\u0020-\u007E\u00A0-\u00FF]+$",
+         "positionIndex": 7,
+         "isRequired": ["counter-sign"],
+         "type": "text"
+       }
+     ]
+   }
+ ]
+ 
