@@ -59,6 +59,13 @@ const MarkdownViewer = ({
     const iframeWindow = ref?.contentWindow;
     if (iframeWindow && !scrollListenerAdded) {
       iframeWindow.addEventListener("scroll", handleIframeScroll);
+      console.log({ w: window.innerWidth });
+      if (window.innerWidth < 450) {
+        const iframe: any = document.getElementById("markdown-viewer-iframe");
+        const style = document.createElement("style");
+        style.textContent = "blockquote { margin:0}";
+        iframe?.contentDocument.head.appendChild(style);
+      }
       setScrollListenerAdded(true);
     }
 
@@ -89,6 +96,7 @@ const MarkdownViewer = ({
     >
       <iframe
         ref={setRef}
+        id="markdown-viewer-iframe"
         onScroll={() => console.log("scrollI")}
         frameBorder="0"
         width={"100%"}
